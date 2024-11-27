@@ -85,7 +85,7 @@ def create_emission_matrix(emission_counts, tag_counts, vocab2idx, alpha):
 
 def initialize(A, B, tag_counts, vocab2idx, states, prep_tokens):
     num_tags = len(tag_counts)
-    best_probs = np.zeros((num_tags, num_tags))
+    best_probs = np.zeros((num_tags, len(prep_tokens)))
     best_paths = np.zeros((num_tags, len(prep_tokens)), dtype=int)
     s_idx = states.index('--s--')
 
